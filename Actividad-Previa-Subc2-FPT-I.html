@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad Diagnóstica - Subcompetencia 2: Organización y Comunicación Empresarial</title>
+    <style>
+        :root {
+            --primary-color: #1e3a8a;
+            --secondary-color: #2563eb;
+            --accent-color: #0d9488;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-color: #1e293b;
+            --light-bg: #f1f5f9;
+            --success-color: #15803d;
+            --border-color: #cbd5e1;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0 0 10px 0;
+            font-size: 1.8rem;
+        }
+
+        header p {
+            margin: 0;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border: 1px solid var(--border-color);
+        }
+
+        .card h2 {
+            color: var(--primary-color);
+            margin-top: 0;
+            border-bottom: 2px solid var(--light-bg);
+            padding-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"], textarea, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 0.95rem;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .question-block {
+            background-color: var(--light-bg);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        .question-title {
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 8px;
+        }
+
+        .btn {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.2s;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-color);
+        }
+
+        .btn-print {
+            background-color: var(--accent-color);
+            display: block;
+            width: 100%;
+            padding: 15px;
+            font-size: 1.1rem;
+            margin-top: 30px;
+        }
+
+        .feedback {
+            display: none;
+            margin-top: 15px;
+            padding: 12px;
+            background-color: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-radius: 6px;
+            color: var(--success-color);
+            font-size: 0.92rem;
+        }
+
+        .feedback h4 {
+            margin: 0 0 5px 0;
+            color: #166534;
+        }
+
+        @media print {
+            body {
+                background-color: white;
+                padding: 0;
+            }
+            .btn, .btn-print {
+                display: none;
+            }
+            .feedback {
+                display: block !important;
+            }
+            .card {
+                box-shadow: none;
+                border: 1px solid #ccc;
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Formación para el Trabajo - Subcompetencia 2</h1>
+        <p>Actividad Diagnóstica Autogestiva: Organización del Proceso de Trabajo y Comunicación Efectiva</p>
+    </header>
+
+    <!-- DATOS DEL ALUMNO PARA CONOCERLO -->
+    <div class="card">
+        <h2>1. Ficha del Alumno</h2>
+        <div class="form-group">
+            <label for="nombre">Nombre Completo:</label>
+            <input type="text" id="nombre" placeholder="Escribe tu nombre completo">
+        </div>
+        <div class="form-group">
+            <label for="grupo">Grupo / Semestre:</label>
+            <input type="text" id="grupo" placeholder="Ej. 1er Semestre - Grupo A">
+        </div>
+        <div class="form-group">
+            <label for="interes">¿Qué experiencia o conocimiento previo tienes sobre cómo funciona una empresa o un trabajo estructurado?</label>
+            <textarea id="interes" placeholder="Cuéntanos brevemente si has trabajado, emprendido o lo que observas en tu entorno..."></textarea>
+        </div>
+    </div>
+
+    <!-- MÓDULO A: PROCESO DE TRABAJO -->
+    <div class="card">
+        <h2>2. El Proceso de Trabajo y sus Elementos</h2>
+        
+        <div class="question-block">
+            <div class="question-title">Pregunta 1: Proceso de Trabajo</div>
+            <p>Reflexiona: Cuando realizas un bien o producto (por ejemplo, hacer pan o artesanías), ¿qué relaciones se establecen entre la persona y sus recursos?</p>
+            <textarea id="q1" placeholder="Escribe tu respuesta previa..."></textarea>
+            <button class="btn" onclick="toggleFeedback('fb1')">Comprobar / Ver Respuesta Teórica</button>
+            <div id="fb1" class="feedback">
+                <h4>Respuesta / Retroalimentación:</h4>
+                <p>El <strong>Proceso de Trabajo</strong> es el conjunto de relaciones entre el ser humano, los objetos y los medios de trabajo, con la finalidad de transformar dichos objetos en un producto final que satisface necesidades, generando autorrealización y remuneración económica.</p>
+            </div>
+        </div>
+
+        <div class="question-block">
+            <div class="question-title">Pregunta 2: Elementos del Proceso de Trabajo</div>
+            <p>Menciona cuáles consideras que son los 4 componentes fundamentales que intervienen en la fabricación de cualquier producto o servicio.</p>
+            <textarea id="q2" placeholder="Escribe tu respuesta previa..."></textarea>
+            <button class="btn" onclick="toggleFeedback('fb2')">Comprobar / Ver Respuesta Teórica</button>
+            <div id="fb2" class="feedback">
+                <h4>Respuesta / Retroalimentación:</h4>
+                <p>Los 4 elementos clave son:</p>
+                <ul>
+                    <li><strong>1. Objeto de trabajo:</strong> La materia sobre la que se actúa (materia bruta, materia prima o bienes inmateriales/ideas).</li>
+                    <li><strong>2. Medios de trabajo:</strong> Herramientas, maquinaria y tecnología empleadas para la transformación.</li>
+                    <li><strong>3. Medios de producción:</strong> La conjunción del objeto de trabajo junto con los medios de trabajo.</li>
+                    <li><strong>4. Trabajo:</strong> El esfuerzo físico y mental ejercido conscientemente por el ser humano a cambio de un sueldo o salario.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- MÓDULO B: LA EMPRESA Y EL PROCESO ADMINISTRATIVO -->
+    <div class="card">
+        <h2>3. La Empresa y el Proceso Administrativo</h2>
+
+        <div class="question-block">
+            <div class="question-title">Pregunta 3: Concepto y Clasificación de la Empresa</div>
+            <p>¿Cómo definirías qué es una empresa y bajo qué criterios crees que se pueden clasificar?</p>
+            <textarea id="q3" placeholder="Escribe tu respuesta previa..."></textarea>
+            <button class="btn" onclick="toggleFeedback('fb3')">Comprobar / Ver Respuesta Teórica</button>
+            <div id="fb3" class="feedback">
+                <h4>Respuesta / Retroalimentación:</h4>
+                <p>Una <strong>Empresa</strong> es una organización de personas que combinan recursos para producir bienes o servicios y satisfacer necesidades del mercado obteniendo beneficios económicos.</p>
+                <p><strong>Clasificación general:</strong></p>
+                <ul>
+                    <li><strong>Por Tamaño:</strong> Micro, Pequeña, Mediana y Grande.</li>
+                    <li><strong>Por Sector Económico:</strong> Industrial, Comercial, Servicios y Agrícola.</li>
+                    <li><strong>Por Forma Jurídica:</strong> Pública, Privada y Mixta.</li>
+                    <li><strong>Por Alcance Geográfico:</strong> Local, Nacional, Multinacional y Global.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="question-block">
+            <div class="question-title">Pregunta 4: Proceso Administrativo</div>
+            <p>Para lograr que una empresa o proyecto logre sus metas, ¿cuáles son las 4 etapas lógicas del proceso administrativo?</p>
+            <textarea id="q4" placeholder="Escribe tu respuesta previa..."></textarea>
+            <button class="btn" onclick="toggleFeedback('fb4')">Comprobar / Ver Respuesta Teórica</button>
+            <div id="fb4" class="feedback">
+                <h4>Respuesta / Retroalimentación:</h4>
+                <p>El <strong>Proceso Administrativo</strong> abarca 4 fases interrelacionadas:</p>
+                <ul>
+                    <li><strong>Planeación:</strong> ¿Qué se va a hacer?</li>
+                    <li><strong>Organización:</strong> ¿Cómo se va a hacer?</li>
+                    <li><strong>Dirección:</strong> ¿Ver que se haga / cómo se está haciendo?</li>
+                    <li><strong>Control:</strong> ¿Cómo se hizo / evaluación?</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- MÓDULO C: ORGANIZACIÓN Y ESTRUCTURA EMPRESARIAL -->
+    <div class="card">
+        <h2>4. Etapas de la Organización, Departamentalización y Organigramas</h2>
+
+        <div class="question-block">
+            <div class="question-title">Pregunta 5: Organización, Jerarquización y Departamentalización</div>
+            <p>Explica con tus palabras qué diferencia hay entre dividir los departamentos de una empresa y establecer niveles de autoridad (jerarquía).</p>
+            <textarea id="q5" placeholder="Escribe tu respuesta previa..."></textarea>
+            <button class="btn" onclick="toggleFeedback('fb5')">Comprobar / Ver Respuesta Teórica</button>
+            <div id="fb5" class="feedback">
+                <h4>Respuesta / Retroalimentación:</h4>
+                <p><strong>Organización:</strong> Consiste en diseñar la estructura, métodos y funciones para coordinar recursos de forma eficiente.</p>
+                <ul>
+                    <li><strong>Departamentalización:</strong> Agrupa actividades y funciones similares en unidades específicas (por funciones, producto, clientes, área geográfica, procesos, proyectos o matricial).</li>
+                    <li><strong>Jerarquización:</strong> Establece la estructura de mando y cadena de autoridad, determinando quién reporta a quién.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="question-block">
+            <div class="question-title">Pregunta 6: Organigramas y sus Tipos</div>
+            <p>¿Qué es un organigrama y qué formas de representación gráfica conoces?</p>
+            <textarea id="q6" placeholder="Escribe tu respuesta previa..."></textarea>
+            <button class="btn" onclick="toggleFeedback('fb6')">Comprobar / Ver Respuesta Teórica</button>
+            <div id="fb6" class="feedback">
+                <h4>Respuesta / Retroalimentación:</h4>
+                <p>Un <strong>Organigrama</strong> (o carta de organización) es la representación gráfica formal de la estructura de una empresa, mostrando funciones, niveles jerárquicos y líneas de autoridad.</p>
+                <p><strong>Tipos principales:</strong> Vertical (el más común, de arriba a abajo), Horizontal (de izquierda a derecha), Circular (del centro hacia la periferia) y Mixto (combina vertical y horizontal).</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- MÓDULO D: CULTURA, COMUNICACIÓN Y LIDERAZGO -->
+    <div class="card">
+        <h2>5. Cultura Laboral, Comunicación y Liderazgo</h2>
+
+        <div class="question-block">
+            <div class="question-title">Pregunta 7: Cultura de Trabajo y Estilos de Comunicación</div>
+            <p>¿Qué entiendes por cultura de trabajo y cuáles son los estilos de comunicación que pueden surgir en un equipo?</p>
+            <textarea id="q7" placeholder="Escribe tu respuesta previa..."></textarea>
+            <button class="btn" onclick="toggleFeedback('fb7')">Comprobar / Ver Respuesta Teórica</button>
+            <div id="fb7" class="feedback">
+                <h4>Respuesta / Retroalimentación:</h4>
+                <p><strong>Cultura de trabajo:</strong> Es la costumbre y hábito colectivo de dedicarse con esfuerzo a la realización de actividades laborales especificas.</p>
+                <p><strong>Estilos de comunicación:</strong> Pasivo, Agresivo, Pasivo-Agresivo y <strong>Asertivo</strong>.</p>
+            </div>
+        </div>
+
+        <div class="question-block">
+            <div class="question-title">Pregunta 8: Comunicación Asertiva y Liderazgo Empresarial</div>
+            <p>¿Qué caracteriza a un líder empresarial efectivo y qué pilares componen una comunicación asertiva?</p>
+            <textarea id="q8" placeholder="Escribe tu respuesta previa..."></textarea>
+            <button class="btn" onclick="toggleFeedback('fb8')">Comprobar / Ver Respuesta Teórica</button>
+            <div id="fb8" class="feedback">
+                <h4>Respuesta / Retroalimentación:</h4>
+                <p><strong>Comunicación Asertiva:</strong> Es expresar ideas con claridad, seguridad, tranquilidad y empatía sin caer en la agresividad. Sus pilares son: Asertividad, Escucha activa, Claridad y Empatía.</p>
+                <p><strong>Liderazgo Empresarial:</strong> Es la cualidad de guiarnos e influir en el equipo para la toma de decisiones, combinando dirección, estrategia, solución de problemas y trabajo colaborativo.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOTÓN FINAL -->
+    <button class="btn btn-print" onclick="finalizarActividad()">Finalizar y Guardar Diagnóstico (PDF / Imprimir)</button>
+</div>
+
+<script>
+    function toggleFeedback(id) {
+        var element = document.getElementById(id);
+        if (element.style.display === "block") {
+            element.style.display = "none";
+        } else {
+            element.style.display = "block";
+        }
+    }
+
+    function finalizarActividad() {
+        // Revelar todas las respuestas antes de guardar/imprimir
+        var feedbacks = document.querySelectorAll('.feedback');
+        feedbacks.forEach(function(fb) {
+            fb.style.display = 'block';
+        });
+
+        alert("Se han activado todas las retroalimentaciones. Ahora puedes guardar tu archivo en PDF o imprimirlo.");
+        window.print();
+    }
+</script>
+
+</body>
+</html>
